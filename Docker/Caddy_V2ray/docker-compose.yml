@@ -7,7 +7,7 @@ services:
     network_mode: "host"
     environment:
       sspanel_url: "https://xxxx"
-      key: "xxxx"
+      key: "Alliswell2day1477"
       docker: "true"
       speedtest: 6
       node_id: 10
