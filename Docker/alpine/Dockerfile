@@ -1,6 +1,6 @@
 FROM ubuntu:latest as builder
 
-LABEL maintainer="Rico <rico93@outlook.com>"
+LABEL maintainer="alliswell2day"
 
 ENV v2ray_version=4.16.1
 
