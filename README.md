@@ -1,50 +1,6 @@
 # v2ray-sspanel-v3-mod_Uim-plugin
 
 
-## Thanks
-1. 感恩的 [ColetteContreras's repo](https://github.com/ColetteContreras/v2ray-ssrpanel-plugin). 让我一个go小白有了下手地。主要起始框架来源于这里
-2. 感恩 [eycorsican](https://github.com/eycorsican) 在v2ray-core [issue](https://github.com/v2ray/v2ray-core/issues/1514), 促成了go版本提上日程
-
-
-# 划重点
-1. 用户务必保证，host 务必填写没有被墙的地址
-2. 目前端口设置为0，才会监听本地，不再是443
-3. 已经适配了中转，必须用我自己维护的[panel](https://github.com/rico93/ss-panel-v3-mod_Uim)
-   
-## 项目状态
-
-支持 [ss-panel-v3-mod_Uim](https://github.com/NimaQu/ss-panel-v3-mod_Uim) 的 webapi。 目前自己也尝试维护了一个版本, [panel](https://github.com/rico93/ss-panel-v3-mod_Uim)
-
-目前只适配了流量记录、服务器是否在线、在线人数,在线ip上报、负载、中转，后端根据前端的设定自动调用 API 增加用户。
-
-v2ray 后端 kcp、tcp、ws 都是多用户共用一个端口。
-
-也可作为 ss 后端一个用户一个端口。
-
-## 已知 Bug
-
-## 作为 ss 后端
-
-面板配置是节点类型为 Shadowsocks，普通端口。
-
-加密方式只支持：
-
-- [x] aes-256-cfb
-- [x] aes-128-cfb
-- [x] chacha20
-- [x] chacha20-ietf
-- [x] aes-256-gcm
-- [x] aes-128-gcm
-- [x] chacha20-poly1305 或称 chacha20-ietf-poly1305
-
-## 作为 V2ray 后端
-
-这里面板设置是节点类型v2ray, 普通端口。 v2ray的API接口默认是2333
-
-支持 tcp,kcp、ws+(tls 由镜像 Caddy或者ngnix 提供,默认是443接口哦)。或者自己调整。
-
-[面板设置说明 主要是这个](https://github.com/NimaQu/ss-panel-v3-mod_Uim/wiki/v2ray-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B)
-
 ~~~
 没有CDN的域名或者ip;端口（外部链接的);AlterId;协议层;;额外参数(path=/v2ray|host=xxxx.win|inside_port=10550这个端口内部监听))
 
@@ -140,17 +96,6 @@ chmod +x tcp.sh && ./tcp.sh
 wget https://www.moerats.com/usr/shell/swap.sh && bash swap.sh
 ~~~
 
-### [推荐] 脚本部署
-
-#### Docker-compose 安装 
-这里一直保持最新版
-~~~
-mkdir v2ray-agent  &&  \
-cd v2ray-agent && \
-curl https://raw.githubusercontent.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/master/install.sh -o install.sh && \
-chmod +x install.sh && \
-bash install.sh
-~~~
 
 
 #### 普通安装
@@ -158,22 +103,11 @@ bash install.sh
 修改了官方安装脚本
 用脚本指定面板信息，请务必删除原有的config.json, 否则不会更新config.json
 
-安装（这里保持最新版本）
-~~~
-bash <(curl -L -s  https://raw.githubusercontent.com/rico93/v2ray-core/master/release/install-release.sh) --panelurl https://xxxx --panelkey xxxx --nodeid 21
-~~~
-
 后续升级（如果要更新到最新版本）
 ~~~
 bash <(curl -L -s  https://raw.githubusercontent.com/rico93/v2ray-core/master/release/install-release.sh)
 ~~~
 
-
-如果要强制安装某个版本
-
-~~~
-bash <(curl -L -s  https://raw.githubusercontent.com/rico93/v2ray-core/master/release/install-release.sh) -f --version 4.12.0
-~~~
 
 
 config.json Example 
