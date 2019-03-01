@@ -3,8 +3,8 @@ package utility
 import (
 	"crypto/md5"
 	"fmt"
-	"github.com/shirou/gopsutil/host"
-	"github.com/shirou/gopsutil/load"
+	"github.com/alliswell2day/gopsutil/host"
+	"github.com/alliswell2day/gopsutil/load"
 	"math/rand"
 	"time"
 )
