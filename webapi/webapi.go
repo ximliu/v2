@@ -2,10 +2,10 @@ package webapi
 
 import (
 	"fmt"
-	"github.com/imroc/req"
-	"github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/model"
-	"github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/speedtest"
-	"github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/utility"
+	"github.com/alliswell2day/req"
+	"github.com/alliswell2day/v2/model"
+	"github.com/alliswell2day/v2/speedtest"
+	"github.com/alliswell2day/v2/utility"
 	"log"
 	"strconv"
 	"strings"
