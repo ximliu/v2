@@ -3,8 +3,8 @@ package Manager
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/client"
-	"github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/model"
+	"github.com/alliswell2day/v2/client"
+	"github.com/alliswell2day/v2/model"
 	"strconv"
 	"v2ray.com/core/common/errors"
 	"v2ray.com/core/transport/internet"
