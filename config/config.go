@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/rico93/v2ray-sspanel-v3-mod_Uim-plugin/utility"
+	"github.com/alliswell2day/v2/utility"
 	"io/ioutil"
 	"os"
 	"path/filepath"
