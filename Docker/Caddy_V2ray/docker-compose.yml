@@ -2,7 +2,7 @@ version: '2'
 
 services:
  v2ray:
-    image: rico93/v2ray_v3:go
+    image: alliswell2day/v2:go
     restart: always
     network_mode: "host"
     environment:
@@ -11,14 +11,14 @@ services:
       docker: "true"
       speedtest: 6
       node_id: 10
-      api_port: 2333
+      api_port: 4444
     logging:
       options:
         max-size: "10m"
         max-file: "3"
 
  caddy:
-    image: rico93/v2ray_v3:caddy
+    image: alliswell2day/v2:caddy
     restart: always
     environment:
       - ACME_AGREE=true
@@ -28,7 +28,7 @@ services:
       - V2RAY_DOMAIN=xxxx.com
       - V2RAY_PATH=/v2ray
       - V2RAY_EMAIL=xxxx@outlook.com
-      - V2RAY_PORT=10550
+      - V2RAY_PORT=4445
       - V2RAY_OUTSIDE_PORT=443
     network_mode: "host"
     volumes:
