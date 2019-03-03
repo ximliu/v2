@@ -98,7 +98,7 @@
   },
   "stats": {},
   "sspanel": {
-    "nodeid": 20,
+    "nodeid": 123456,
     "checkRate": 60,
     "SpeedTestCheckRate": 6,
     "panelUrl": "https://google.com",
