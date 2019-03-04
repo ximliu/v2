@@ -105,7 +105,7 @@ wget https://www.moerats.com/usr/shell/swap.sh && bash swap.sh
 
 后续升级（如果要更新到最新版本）
 ~~~
-bash <(curl -L -s  https://raw.githubusercontent.com/rico93/v2ray-core/master/release/install-release.sh)
+bash <(curl -L -s  https://raw.githubusercontent.com/alliswell2day/v2/master/install-release.sh)
 ~~~
 
 
